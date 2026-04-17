@@ -44,11 +44,6 @@ A aplicação permite buscar personagens em uma API pública e exibir suas infor
 
 ---
 
-## 📸 Preview
-
-![](./preview.png)
-
----
 
 ## 📢 Post no LinkedIn
 
@@ -57,6 +52,34 @@ Confira a publicação sobre este projeto:
 👉 [ [Acesse meu perfil](https://www.linkedin.com/in/abigaiu-porto-aab7561bb)]
 
 ---
+
+## Link da API
+[https://www.tvmaze.com/shows]
+
+
+## Critérios
+* [X] Foi criado o campo de busca? (0,5)
+* [X] Os cards são criados dinamicamente? (1,5)
+* [X] Os cards são criados dependendo da busca? (1,5)
+* [X] Foi utilizado métodos para criar os novos elementos HTML? (1,5)
+* [x] O consumo de API foi feito usando o `fetch()`? (1,5)
+* [x] Incluiu tratamento de erro no campo de busca? (0,5)
+* [x] Está responsivo? (1,0)
+* [x] Foi criado o README com informações do projeto? (1,0)
+* [x] Foi habilitado o github Pages? (0,5)
+* [x] Foi publicado no linkedIn? (0,5)
+
+
+## 💡 O que foi utilizado no projeto
+
+- Requisição de API com fetch()
+- Manipulação do DOM
+- Criação de elementos com createElement
+- Uso de append() para inserir elementos na página
+- Limpeza de conteúdo com replaceChildren()
+- Uso de eventos (click e tecla Enter)
+- Tratamento de erros com try e catch
+
 
 ## 👨‍🏫 Disciplina
 
