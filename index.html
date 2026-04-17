@@ -3,33 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consumir API</title>
-  <link rel="stylesheet" href="style.css"> 
-  <script src="./script.js"defer></script>
-  
+  <title>Buscar Séries</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
+<header class="topo">
+  <img src="img/fundo.jpg" class="imagem-topo" alt="Imagem de fundo">
 
-<header class="hero">
+  <div class="conteudo-topo">
+     <h1>🎬 Descubra Séries Incríveis</h1>
 
-  <!-- IMAGEM NO TOPO -->
-  <img src="img/fundo.jpg" class="top-img">
+      <p>Digite o nome de uma série no campo abaixo e clique em "Buscar".</p>
 
-  <div class="overlay">
-    <h1>🎬 Descubra Séries Incríveis</h1>
-    <p>Busque por títulos, gêneros ou atores e mergulhe no mundo do entretenimento</p>
-
-    <div class="search-box">
-      <input type="text" id="nome" placeholder="Buscar séries...">
+    <div class="caixa-busca">
+      <input type="text" id="nome" placeholder="Digite uma série">
       <button id="botao-pesquisar">Buscar</button>
     </div>
   </div>
-
 </header>
 
 <main>
-  <section id="card-container"></section>
+  <section id="lista-cards"></section>
 </main>
 
 </body>

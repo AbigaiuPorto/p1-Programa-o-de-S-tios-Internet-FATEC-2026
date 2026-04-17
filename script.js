@@ -1,15 +1,17 @@
 'use strict'
 
-function criarCard(serie){
-    const galeria = document.getElementById('card-container')
+function criarCard(serie) {
+
+    const lista = document.getElementById('lista-cards')
 
     const card = document.createElement('div')
-    card.classList.add('card')
+    card.className = 'card-serie'
 
     const imagem = document.createElement('img')
     if (serie.image) {
         imagem.src = serie.image.medium
     }
+    imagem.alt = serie.name
 
     const titulo = document.createElement('h3')
     titulo.textContent = serie.name
@@ -22,36 +24,56 @@ function criarCard(serie){
 
     const botao = document.createElement('button')
     botao.textContent = "Ver mais"
-    botao.addEventListener('click', function(){
-        abrir(serie.url)
-    })
+    botao.onclick = function () {
+        window.open(serie.url)
+    }
 
-    card.append(imagem)
-    card.append(titulo)
-    card.append(idioma)
-    card.append(genero)
-    card.append(botao)
+    card.append(imagem, titulo, idioma, genero, botao)
 
-    galeria.append(card)
+    lista.append(card)
 }
 
-async function carregarSeries(){
+
+async function carregarSeries() {
+
     const nome = document.getElementById('nome').value
-    const url = `https://api.tvmaze.com/search/shows?q=${nome}`
+    const lista = document.getElementById('lista-cards')
 
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log(data)
+    const url = "https://api.tvmaze.com/search/shows?q=" + nome
 
-    document.getElementById('card-container').replaceChildren()
+    try {
 
-    data.forEach(function(item){
-        criarCard(item.show)
+        const response = await fetch(url)
+        const data = await response.json()
+
+        console.log(data)
+
+        lista.replaceChildren()
+
+        data.forEach(function(item){
+            criarCard(item.show)
+        })
+
+    } catch (erro) {
+
+        console.log(erro)
+
+        const msg = document.createElement('p')
+        msg.textContent = "Erro ao buscar dados"
+        lista.append(msg)
+    }
+}
+
+document
+    .getElementById('botao-pesquisar')
+    .addEventListener('click', carregarSeries)
+
+    document
+    .getElementById('nome')
+    .addEventListener('keypress', function (evento) {
+
+        if (evento.key === 'Enter') {
+            carregarSeries()
+        }
+
     })
-}
-
-function abrir(url){
-    window.open(url)
-}
-
-document.getElementById('botao-pesquisar').addEventListener('click', carregarSeries)

@@ -17,155 +17,106 @@ body {
     background-image: url("./img/marmorizado.jpg");
     font-family: Arial, sans-serif;
     color: var(--text);
-    
 }
 
-/* HERO */
-.hero {
-    width: 100%;
+.topo {
     text-align: center;
 }
 
-/* IMAGEM TOPO */
-.top-img {
+.imagem-topo {
     width: 100%;
-    height: 500px;
+    
     object-fit: cover;
-    object-position: top;
 }
 
 /* CONTEÚDO */
-.overlay {
-    padding: 30px 20px;
+.conteudo-topo {
+    padding: 20px;
 }
 
-/* TÍTULO */
-.overlay h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* TEXTO */
-.overlay p {
+.conteudo-topo p {
     color: var(--text-light);
     margin-bottom: 20px;
+     margin-top: 20px;
 }
 
 /* BUSCA */
-.search-box {
+.caixa-busca {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.search-box input {
-    padding: 12px;
-    width: 280px;
-    border-radius: 6px;
+.caixa-busca input {
+    padding: 10px;
+    width: 250px;
     border: 1px solid var(--border);
-    background-color: #000;
+    background: #000;
     color: var(--text);
 }
 
-.search-box input::placeholder {
-    color: var(--text-light);
-}
-
-.search-box button {
-    padding: 12px 20px;
-    border: none;
-    background-color: var(--primary);
+.caixa-busca button {
+    padding: 10px;
+    background: var(--primary);
     color: white;
-    border-radius: 6px;
+    border: none;
     cursor: pointer;
 }
 
-.search-box button:hover {
-    background-color: #b20710;
-}
-
-/* MAIN */
-main {
-    padding: 40px;
-}
-
 /* CARDS */
-#card-container {
+#lista-cards {
+    margin-top: 30px;
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 
-/* CARD */
-.card {
-    background-color: var(--card);
+.card-serie {
+    background: var(--card);
     border: 2px solid red;
     border-radius: 12px;
     width: 200px;
-    height: 340px;
-    padding: 15px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.08);
-}
-
-/* IMG */
-.card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* TEXT */
-.card h3 {
-    font-size: 1rem;
-    margin-top: 10px;
+    padding: 10px;
     text-align: center;
 }
 
-.card p {
+.card-serie img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-serie h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.card-serie p {
     font-size: 0.85rem;
     color: var(--text-light);
-    text-align: center;
 }
 
-/* BUTTON */
-.card button {
-    margin-top: auto;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    background-color: var(--primary);
-    border-radius: 4px;
-    border: none;
+.card-serie button {
+    margin-top: 10px;
+    padding: 6px;
+    background: var(--primary);
     color: white;
+    border: none;
     cursor: pointer;
 }
 
 /* RESPONSIVO */
 @media (max-width: 600px) {
-    .top-img {
-        height: 200px;
-    }
-
-    .overlay h1 {
-        font-size: 1.8rem;
-    }
-
-    .search-box {
+    .caixa-busca {
         flex-direction: column;
     }
 
-    .search-box input {
+    .caixa-busca input {
         width: 100%;
+    }
+
+    .imagem-topo {
+        height: 200px;
     }
 }

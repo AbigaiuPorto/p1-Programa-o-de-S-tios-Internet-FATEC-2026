@@ -54,7 +54,7 @@ A aplicação permite buscar personagens em uma API pública e exibir suas infor
 
 Confira a publicação sobre este projeto:
 
-👉 [COLE AQUI O LINK DO POST]
+👉 [ [Acesse meu perfil](https://www.linkedin.com/in/abigaiu-porto-aab7561bb)]
 
 ---
 
